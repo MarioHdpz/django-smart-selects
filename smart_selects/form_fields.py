@@ -143,4 +143,4 @@ class GroupedModelSelect(ModelChoiceField):
     def make_choice(self, obj):
         return (obj.pk, "   " + self.label_from_instance(obj))
 
-    choices = property(_get_choices, ChoiceField._set_choices)
+    choices = property(_get_choices, ChoiceField.choices)
