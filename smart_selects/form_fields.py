@@ -59,7 +59,7 @@ class ChainedModelChoiceField(ModelChoiceField):
         choices = super(ChainedModelChoiceField, self)._get_choices()
         return choices
 
-    choices = property(_get_choices, ChoiceField._set_choices)
+    choices = property(_get_choices, ChoiceField.choices)
 
 
 class ChainedManyToManyField(ModelMultipleChoiceField):
